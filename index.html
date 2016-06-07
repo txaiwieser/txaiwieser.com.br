@@ -1,50 +1,453 @@
-<!DOCTYPE HTML>
-
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Txai Wieser</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/skel.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-wide.css" />
-			<link rel="stylesheet" href="css/style-noscript.css" />
-		</noscript>
-		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-	</head>
-	<body class="loading">
-		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
-			<div id="main">
+<head>
+	<title>Txai Wieser</title>
 
-				<!-- Header -->
+    <meta name="description" content="Txai Wieser - Engenharia de Computação e Desenvolvimento de Aplicativos">
+    <meta name="keywords" content="Txai Wieser, Txai, Desenvolvedor, Desenvolvedor iOS, Aplicativo iPhone, Desenvolvedor Porto Alegre">
+
+    <meta property="og:title" content="Txai Wieser.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://txaiwieser.com.br/">
+    <!-- <meta property="og:image" content="https://parakeetweb.s3.amazonaws.com/images/apple-touch-icon-precomposed.png"> -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'> -->
+    <!-- <link href='http://fonts.googleapis.com/css?family=Volkhov:400italic' rel='stylesheet' type='text/css'> -->
+
+    <!-- <link rel="apple-touch-icon" href="https://parakeetweb.s3.amazonaws.com/images/apple-touch-icon-precomposed.png"> -->
+    <!-- <link rel="apple-touch-icon-precomposed" href="https://parakeetweb.s3.amazonaws.com/images/apple-touch-icon-precomposed.png"> -->
+    <!-- <link rel="shortcut icon" href="https://parakeetweb.s3.amazonaws.com/images/favicon.ico" type="image/x-icon"> -->
+
+    <link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- <script src="https://parakeetweb.s3.amazonaws.com/el-pagination/js/el-pagination.js"></script> -->
+    <!-- <script src="https://parakeetweb.s3.amazonaws.com/js/parakeet.js"></script> -->
+</head>
+<body>
+
+<style>
+/* Icon */
+
+	.icon {
+		position: relative;
+	}
+
+		.icon:before {
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-transform: none !important;
+		}
+
+		.icon > .label {
+			display: none;
+		}
+
+/* Wrapper *//*
+	@-moz-keyframes wrapper { 0% { opacity: 0; } 100% { opacity: 1; } }
+	@-webkit-keyframes wrapper { 0% { opacity: 0; } 100% { opacity: 1; } }
+	@-o-keyframes wrapper { 0% { opacity: 0; } 100% { opacity: 1; } }
+	@-ms-keyframes wrapper { 0% { opacity: 0; } 100% { opacity: 1; } }
+	@keyframes wrapper { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+	#wrapper {
+		-moz-animation: wrapper 3s forwards;
+		-webkit-animation: wrapper 3s forwards;
+		-o-animation: wrapper 3s forwards;
+		-ms-animation: wrapper 3s forwards;
+		animation: wrapper 3s forwards;
+		height: 100%;
+		left: 0;
+		opacity: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}*/
+
+/* Header */
+	@-moz-keyframes header { 0% { -moz-transform: translate3d(0,1em,0); -webkit-transform: translate3d(0,1em,0); -o-transform: translate3d(0,1em,0); -ms-transform: translate3d(0,1em,0); transform: translate3d(0,1em,0); opacity: 0; } 100% { -moz-transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0); -o-transform: translate3d(0,0,0); -ms-transform: translate3d(0,0,0); transform: translate3d(0,0,0); opacity: 1; } }
+	@-webkit-keyframes header { 0% { -moz-transform: translate3d(0,1em,0); -webkit-transform: translate3d(0,1em,0); -o-transform: translate3d(0,1em,0); -ms-transform: translate3d(0,1em,0); transform: translate3d(0,1em,0); opacity: 0; } 100% { -moz-transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0); -o-transform: translate3d(0,0,0); -ms-transform: translate3d(0,0,0); transform: translate3d(0,0,0); opacity: 1; } }
+	@-o-keyframes header { 0% { -moz-transform: translate3d(0,1em,0); -webkit-transform: translate3d(0,1em,0); -o-transform: translate3d(0,1em,0); -ms-transform: translate3d(0,1em,0); transform: translate3d(0,1em,0); opacity: 0; } 100% { -moz-transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0); -o-transform: translate3d(0,0,0); -ms-transform: translate3d(0,0,0); transform: translate3d(0,0,0); opacity: 1; } }
+	@-ms-keyframes header { 0% { -moz-transform: translate3d(0,1em,0); -webkit-transform: translate3d(0,1em,0); -o-transform: translate3d(0,1em,0); -ms-transform: translate3d(0,1em,0); transform: translate3d(0,1em,0); opacity: 0; } 100% { -moz-transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0); -o-transform: translate3d(0,0,0); -ms-transform: translate3d(0,0,0); transform: translate3d(0,0,0); opacity: 1; } }
+	@keyframes header { 0% { -moz-transform: translate3d(0,1em,0); -webkit-transform: translate3d(0,1em,0); -o-transform: translate3d(0,1em,0); -ms-transform: translate3d(0,1em,0); transform: translate3d(0,1em,0); opacity: 0; } 100% { -moz-transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0); -o-transform: translate3d(0,0,0); -ms-transform: translate3d(0,0,0); transform: translate3d(0,0,0); opacity: 1; } }
+	@-moz-keyframes nav-icons { 0% { -moz-transform: translate3d(0,1em,0); -webkit-transform: translate3d(0,1em,0); -o-transform: translate3d(0,1em,0); -ms-transform: translate3d(0,1em,0); transform: translate3d(0,1em,0); opacity: 0; } 100% { -moz-transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0); -o-transform: translate3d(0,0,0); -ms-transform: translate3d(0,0,0); transform: translate3d(0,0,0); opacity: 1; } }
+	@-webkit-keyframes nav-icons { 0% { -moz-transform: translate3d(0,1em,0); -webkit-transform: translate3d(0,1em,0); -o-transform: translate3d(0,1em,0); -ms-transform: translate3d(0,1em,0); transform: translate3d(0,1em,0); opacity: 0; } 100% { -moz-transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0); -o-transform: translate3d(0,0,0); -ms-transform: translate3d(0,0,0); transform: translate3d(0,0,0); opacity: 1; } }
+	@-o-keyframes nav-icons { 0% { -moz-transform: translate3d(0,1em,0); -webkit-transform: translate3d(0,1em,0); -o-transform: translate3d(0,1em,0); -ms-transform: translate3d(0,1em,0); transform: translate3d(0,1em,0); opacity: 0; } 100% { -moz-transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0); -o-transform: translate3d(0,0,0); -ms-transform: translate3d(0,0,0); transform: translate3d(0,0,0); opacity: 1; } }
+	@-ms-keyframes nav-icons { 0% { -moz-transform: translate3d(0,1em,0); -webkit-transform: translate3d(0,1em,0); -o-transform: translate3d(0,1em,0); -ms-transform: translate3d(0,1em,0); transform: translate3d(0,1em,0); opacity: 0; } 100% { -moz-transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0); -o-transform: translate3d(0,0,0); -ms-transform: translate3d(0,0,0); transform: translate3d(0,0,0); opacity: 1; } }
+	@keyframes nav-icons { 0% { -moz-transform: translate3d(0,1em,0); -webkit-transform: translate3d(0,1em,0); -o-transform: translate3d(0,1em,0); -ms-transform: translate3d(0,1em,0); transform: translate3d(0,1em,0); opacity: 0; } 100% { -moz-transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0); -o-transform: translate3d(0,0,0); -ms-transform: translate3d(0,0,0); transform: translate3d(0,0,0); opacity: 1; } }
+
+	#header {
+		-moz-animation: header 1s 2.25s forwards;
+		-webkit-animation: header 1s 2.25s forwards;
+		-o-animation: header 1s 2.25s forwards;
+		-ms-animation: header 1s 2.25s forwards;
+		animation: header 1s 2.25s forwards;
+		-moz-backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		-o-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-moz-transform: translate3d(0,0,0);
+		-webkit-transform: translate3d(0,0,0);
+		-o-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+		cursor: default;
+		display: inline-block;
+		opacity: 0;
+		position: relative;
+		text-align: center;
+		vertical-align: middle;
+		width: 100%;
+		height: 720px;
+		background-color: #4168DA;
+		color: white;
+	}
+
+		#header h1 {
+			font-size: 4.35em;
+			font-weight: 900;
+			letter-spacing: -0.035em;
+			line-height: 1em;
+		}
+
+		#header p {
+			font-size: 1.5em;
+			margin: 0.75em 0 0.25em 0;
+			opacity: 0.75;
+		}
+
+		#header nav {
+			margin: 1.5em 0 0 0;
+		}
+
+			#header nav li {
+				-moz-animation: nav-icons 0.5s ease-in-out forwards;
+				-webkit-animation: nav-icons 0.5s ease-in-out forwards;
+				-o-animation: nav-icons 0.5s ease-in-out forwards;
+				-ms-animation: nav-icons 0.5s ease-in-out forwards;
+				animation: nav-icons 0.5s ease-in-out forwards;
+				-moz-backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
+				-o-backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				backface-visibility: hidden;
+				-moz-transform: translate3d(0,0,0);
+				-webkit-transform: translate3d(0,0,0);
+				-o-transform: translate3d(0,0,0);
+				-ms-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+				display: inline-block;
+				height: 5.35em;
+				line-height: 5.885em;
+				opacity: 0;
+				position: relative;
+				top: 0;
+				width: 5.35em;
+			}
+
+				#header nav li:nth-child(1) {
+					-moz-animation-delay: 2.5s;
+					-webkit-animation-delay: 2.5s;
+					-o-animation-delay: 2.5s;
+					-ms-animation-delay: 2.5s;
+					animation-delay: 2.5s;
+				}
+
+				#header nav li:nth-child(2) {
+					-moz-animation-delay: 2.75s;
+					-webkit-animation-delay: 2.75s;
+					-o-animation-delay: 2.75s;
+					-ms-animation-delay: 2.75s;
+					animation-delay: 2.75s;
+				}
+
+				#header nav li:nth-child(3) {
+					-moz-animation-delay: 3s;
+					-webkit-animation-delay: 3s;
+					-o-animation-delay: 3s;
+					-ms-animation-delay: 3s;
+					animation-delay: 3s;
+				}
+
+				#header nav li:nth-child(4) {
+					-moz-animation-delay: 3.25s;
+					-webkit-animation-delay: 3.25s;
+					-o-animation-delay: 3.25s;
+					-ms-animation-delay: 3.25s;
+					animation-delay: 3.25s;
+				}
+
+				#header nav li:nth-child(5) {
+					-moz-animation-delay: 3.5s;
+					-webkit-animation-delay: 3.5s;
+					-o-animation-delay: 3.5s;
+					-ms-animation-delay: 3.5s;
+					animation-delay: 3.5s;
+				}
+
+				#header nav li:nth-child(6) {
+					-moz-animation-delay: 3.75s;
+					-webkit-animation-delay: 3.75s;
+					-o-animation-delay: 3.75s;
+					-ms-animation-delay: 3.75s;
+					animation-delay: 3.75s;
+				}
+
+				#header nav li:nth-child(7) {
+					-moz-animation-delay: 4s;
+					-webkit-animation-delay: 4s;
+					-o-animation-delay: 4s;
+					-ms-animation-delay: 4s;
+					animation-delay: 4s;
+				}
+
+				#header nav li:nth-child(8) {
+					-moz-animation-delay: 4.25s;
+					-webkit-animation-delay: 4.25s;
+					-o-animation-delay: 4.25s;
+					-ms-animation-delay: 4.25s;
+					animation-delay: 4.25s;
+				}
+
+				#header nav li:nth-child(9) {
+					-moz-animation-delay: 4.5s;
+					-webkit-animation-delay: 4.5s;
+					-o-animation-delay: 4.5s;
+					-ms-animation-delay: 4.5s;
+					animation-delay: 4.5s;
+				}
+
+				#header nav li:nth-child(10) {
+					-moz-animation-delay: 4.75s;
+					-webkit-animation-delay: 4.75s;
+					-o-animation-delay: 4.75s;
+					-ms-animation-delay: 4.75s;
+					animation-delay: 4.75s;
+				}
+
+			#header nav a {
+				-webkit-tap-highlight-color: transparent;
+				-webkit-touch-callout: none;
+				/*border: 0;*/
+				display: inline-block;
+			}
+
+				#header nav a:before {
+					-moz-transition: all 0.2s ease-in-out;
+					-webkit-transition: all 0.2s ease-in-out;
+					-o-transition: all 0.2s ease-in-out;
+					-ms-transition: all 0.2s ease-in-out;
+					transition: all 0.2s ease-in-out;
+					/*border-radius: 100%;*/
+					/*border: solid 1px white;*/
+					display: block;
+					font-size: 1.75em;
+					height: 2.5em;
+					line-height: 2.5em;
+					position: relative;
+					text-align: center;
+					top: 0;
+					width: 2.5em;
+				}
+
+				#header nav a:hover {
+					/*font-size: 1.4em;*/
+				}
+
+					#header nav a:hover:before {
+						/*background-color: rgba(255, 255, 255, 0.175);*/
+						color: #86F7FF;
+					}
+
+				#header nav a:active {
+					/*font-size: 1.36em;*/
+					background: none;
+				}
+
+					#header nav a:active:before {
+						/*background-color: rgba(255, 255, 255, 0.35);*/
+						color: #86F7FF;
+					}
+
+				#header nav a span {
+					display: none;
+				}
+
+</style>
+
+
+
+
+
+<style>
+section.info {
+  background-color: #4168DA;
+}
+.piece-title.repel {
+  color: #5067B5;
+}
+.piece-date.repel {
+  color: #5067B5;
+}
+</style>
+
+<div class="container info">
+  <section class="portfolio info">
+    <div class="piece-icon info">
 					<header id="header">
 						<h1>Txai Wieser</h1>
 						<p>Computer Engineer &nbsp;&bull;&nbsp; iOS Developer</p>
 						<nav>
-							<ul>
-								<li><a href="http://twitter.com/txaidw" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="http://facebook.com/txaidw" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-								<li><a href="http://instagram.com/txaidw" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="http://repelgame.com/" class="icon fa-briefcase"><span class="label">Projects</span></a></li>
-								<li><a href="http://github.com/txaidw" class="icon fa-github"><span class="label">Github</span></a></li>
-								<li><a href="mailto:txaidw@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+							<ul style="padding-left: 0;">
+								<li><a href="https://twitter.com/txaiwieser" class="icon fa-twitter fa-lg"><span class="label">Twitter</span></a></li>
+								<li><a href="https://facebook.com/txaiwieser" class="icon fa-facebook fa-lg"><span class="label">Facebook</span></a></li>
+								<li><a href="https://instagram.com/txaiwieser" class="icon fa-instagram fa-lg"><span class="label">Instagram</span></a></li>
+								<li><a href="https://github.com/txaiwieser" class="icon fa-github fa-lg"><span class="label">Github</span></a></li>
+								<li><a href="https://linkedin.com/in/txaiwieser" class="icon fa-linkedin fa-lg"><span class="label">LinkedIn</span></a></li>
+								<li><a href="mailto:hello@txaiwieser.com.br" class="icon fa-commenting fa-lg"><span class="label">Email</span></a></li>
 							</ul>
 						</nav>
 					</header>
+    </div>
+  </section>
+</div>
 
-				<!-- Footer -->
-<!-- 					<footer id="footer">
-					</footer>
- -->				
-			</div>
-		</div>
-	</body>
-</html>
+
+
+
+
+
+
+
+
+
+
+
+<style>
+section.repel {
+  background-color: #86FEFF;
+}
+.piece-title.repel {
+  color: #5067B5;
+}
+.piece-date.repel {
+  color: #5067B5;
+}
+</style>
+
+<div class="container">
+  <section class="portfolio repel">
+
+    <div class="piece-icon">
+    	<img src="images/repel_icon.png">
+    </div>
+
+    <div class="piece-caption">
+      <div class="row">
+        <p class="piece-title lrg-text repel">Repel</p>
+      </div>
+      <div class="row">
+        <p class="piece-date mid-text repel">Learn physics having fun!</p>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- <div class="container">
+  <section id="one" class="wrapper style1">
+				<div id="about" class="inner">
+					<article class="feature left">
+						<span class="image"><img src="images/pic01.jpg" alt="" /></span>
+						<div class="content">
+							<h2>Play and Learn!</h2>
+							<p>Repel is a challenging puzzle game, whose goal is to lead the particles to the final destination, by interacting with the characters and finding out what abilities they have.<p/>
+                            <p>The game aims to entertain and gradually establish a connection between the events of the game and the concepts of physics involved. Thus, while playing and having fun, the user is also learning and mostly being motivated to know more about the concepts behind this game.</p>
+                            </div>
+					</article>
+					<article class="feature right">
+						<span class="image"><img src="images/pic02.jpg" alt="" /></span>
+						<div class="content">
+							<h2>Creative Lab</h2>
+							<p>Repel has a level editor called Creative Lab: a place to create, edit and share levels created by the users.</p>
+							<ul class="actions">
+								<li>
+									<a href="https://itunes.apple.com/us/app/repel/id914081825"  target="_top" class="button alt">Download now!</a>
+								</li>
+							</ul>
+						</div>
+					</article>
+				</div>
+			</section>
+</div> -->
+
+
+
+
+<style>
+section.fityit {
+  background-color: #6654CD;
+}
+.piece-title.fityit {
+  color: #ffffff;
+}
+.piece-date.fityit {
+  color: #ffffff;
+}
+</style>
+
+<div class="container">
+  <section class="portfolio fityit">
+
+    <div class="piece-icon">
+    	<img src="images/fityit_icon.png">
+    </div>
+
+    <div class="piece-caption">
+      <div class="row">
+        <p class="piece-title lrg-text fityit">FityIt</p>
+      </div>
+      <div class="row">
+        <p class="piece-date mid-text fityit">The shapes game!</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<style>
+section.recolorindo {
+  background-color: #D25050;
+}
+.piece-title.recolorindo {
+  color: #ffffff;
+}
+.piece-date.recolorindo {
+  color: #ffffff;
+}
+</style>
+
+<div class="container">
+  <section class="portfolio recolorindo">
+
+    <div class="piece-icon">
+    	<img src="images/recolorindo_icon.png">
+    </div>
+
+    <div class="piece-caption">
+      <div class="row">
+        <p class="piece-title lrg-text recolorindo">Recolorindo o Reino</p>
+      </div>
+      <div class="row">
+        <p class="piece-date mid-text recolorindo">Uma incr&iacutevel jornada infantil!</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+</body>
